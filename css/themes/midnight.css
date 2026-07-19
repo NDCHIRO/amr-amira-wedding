@@ -1,0 +1,79 @@
+/* Midnight Blue — navy & silver */
+:root {
+  --gold: #a8b8c8;
+  --gold-light: #d0dce8;
+  --gold-dark: #7a8fa3;
+  --ink: #0d1b2a;
+  --ink-soft: #1b2838;
+  --cream: #f0f4f8;
+  --cream-dark: #e4eaf0;
+  --text: #1b2838;
+  --text-muted: #5a6a7a;
+  --white: #ffffff;
+  --shadow: rgba(13, 27, 42, 0.1);
+  --shadow-lg: rgba(13, 27, 42, 0.16);
+}
+
+body { background: var(--ink); }
+
+.hero {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(168, 184, 200, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 100%, rgba(100, 130, 170, 0.12) 0%, transparent 50%),
+    linear-gradient(165deg, #0d1b2a 0%, #1b2838 50%, #243447 100%);
+}
+
+.hero-frame { border-color: rgba(168, 184, 200, 0.25); }
+.hero-frame::before, .hero-frame::after { border-color: rgba(168, 184, 200, 0.35); }
+.bismillah { color: var(--gold-light); }
+.hero-tag { color: var(--gold-light); border-color: rgba(168,184,200,0.3); }
+
+.hero-names-en {
+  background: linear-gradient(135deg, var(--gold-light), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-names-ar { color: var(--gold-light); }
+.hero-date { color: rgba(255,255,255,0.6); }
+.hero-date .en { color: var(--gold); }
+.hero-ornament path, .hero-ornament circle { stroke: var(--gold); fill: var(--gold); }
+.scroll-hint { color: var(--gold); }
+
+.countdown-wrap { background: var(--ink-soft); margin-top: -40px; padding-bottom: 20px; }
+.countdown-card { background: #243447; border-color: rgba(168,184,200,0.15); }
+.countdown-card .section-title { color: var(--gold-light); }
+.countdown-number { color: var(--gold-light); }
+
+.details { background: var(--ink); }
+.detail-card { background: #1b2838; border-color: rgba(168,184,200,0.12); }
+.detail-card h3 { color: var(--gold-light); }
+.detail-card p { color: rgba(255,255,255,0.55); }
+.detail-card::before { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark)); }
+
+.quote-section { background: linear-gradient(135deg, #1b2838, #243447); border-top: 1px solid rgba(168,184,200,0.15); }
+.quote-text { color: var(--gold-light); }
+
+.location { background: var(--ink-soft); }
+.location-card { border-color: rgba(168,184,200,0.12); }
+.location-info { background: #1b2838; }
+.location-info h3, .location-info p { color: rgba(255,255,255,0.85); }
+.location-venue-en { color: var(--gold) !important; }
+
+.rsvp { background: var(--ink); }
+.rsvp-card { background: #1b2838; border-color: rgba(168,184,200,0.12); }
+.rsvp-text { color: rgba(255,255,255,0.6); }
+.section-title { color: var(--gold-light); }
+
+.btn { background: var(--gold-dark); color: var(--ink); }
+.btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); color: var(--ink); }
+.btn-outline { color: var(--gold-light); border-color: rgba(168,184,200,0.3); }
+
+footer { background: #0a1420; }
+footer .monogram { color: var(--gold-light); }
+
+.template-switch {
+  position: fixed; bottom: 20px; left: 20px;
+  background: var(--gold-light); color: var(--ink);
+  padding: 10px 18px; border-radius: 30px;
+  text-decoration: none; font-size: 13px; font-weight: 700; z-index: 100;
+}

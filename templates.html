@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose a Template — Amr & Amira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Amiri', serif;
+      background: #f4f0ea;
+      color: #3d322c;
+      min-height: 100vh;
+      padding: 48px 24px 64px;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    h1 {
+      text-align: center;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+    .sub {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #7a6548;
+      margin-bottom: 48px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    }
+    .preview {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .preview .names {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      z-index: 1;
+    }
+    .preview .tag {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.7;
+      z-index: 1;
+    }
+    .info { padding: 20px 22px 24px; }
+    .info h2 { font-size: 1.15rem; margin-bottom: 6px; }
+    .info p { font-size: 0.9rem; color: #7a6548; line-height: 1.6; }
+    .badge {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: #f0ebe3;
+      color: #8b6914;
+    }
+
+    /* Preview themes */
+    .p-gold {
+      background: linear-gradient(165deg, #1a1512, #3d2e28);
+      color: #f0dfa0;
+    }
+    .p-light {
+      background: #ffffff;
+      color: #111;
+      border-bottom: 1px solid #eee;
+    }
+    .p-light .names { font-weight: 400; }
+    .p-dark {
+      background: #0a0a0a;
+      color: #d4af37;
+    }
+    .p-botanical {
+      background: linear-gradient(135deg, #eef4ef, #dce8de);
+      color: #3d5a45;
+    }
+    .p-islamic {
+      background: linear-gradient(180deg, #fffdf8, #f5ead6);
+      color: #8b6914;
+    }
+    .p-islamic::before {
+      content: '';
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 4px;
+    }
+    .p-rosegold {
+      background: linear-gradient(135deg, #fff5f6, #fae0e6);
+      color: #9e5560;
+    }
+    .p-midnight {
+      background: linear-gradient(165deg, #0d1b2a, #243447);
+      color: #d0dce8;
+    }
+    .p-royal {
+      background: linear-gradient(165deg, #2d1f3d, #7b4f9e);
+      color: #e2cff0;
+    }
+    .p-desert {
+      background: linear-gradient(165deg, #faf0e4, #e8d4b8);
+      color: #a05840;
+    }
+    .p-artdeco {
+      background: #0c0c0c;
+      color: #d4af37;
+      border: 2px solid #d4af37;
+      margin: 12px;
+      height: 176px;
+      border-radius: 0;
+    }
+    .p-artdeco .names { text-transform: uppercase; letter-spacing: 2px; font-style: normal; font-size: 1.2rem; }
+    .p-ocean {
+      background: linear-gradient(135deg, #e8f6f8, #b8e0e8);
+      color: #2d8a96;
+    }
+    .p-pastel {
+      background: linear-gradient(135deg, #fde8ef, #ede4f5, #ddeef8);
+      color: #a88090;
+    }
+    .p-pastel .names {
+      background: linear-gradient(135deg, #a88090, #9090b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .p-champagne { background: linear-gradient(165deg, #fffbf5, #f0e8d0); color: #a88840; }
+    .p-emerald { background: linear-gradient(165deg, #0a2818, #287850); color: #88c8a0; }
+    .p-sunset { background: linear-gradient(165deg, #fef0e8, #f0c0a0); color: #c86840; }
+    .p-vintage { background: #f8f0e0; color: #6a4828; border: 2px double #c8a878; margin: 12px; height: 176px; }
+    .p-marble { background: linear-gradient(135deg, #fafafa, #e8e8e8); color: #2a2a2a; }
+    .p-marble .names { text-transform: uppercase; letter-spacing: 3px; font-style: normal; font-size: 1.1rem; }
+    .p-nordic { background: #faf9f6; color: #3a3830; border-bottom: 1px solid #e8e6e0; }
+    .p-nordic .names { font-style: normal; font-weight: 400; }
+    .p-cherry { background: linear-gradient(135deg, #fff8f9, #fce8ee); color: #b86878; }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #8b6914;
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>اختر التصميم</h1>
+    <p class="sub en">Choose Your Wedding Template</p>
+
+    <div class="grid">
+      <a class="card" href="index.html">
+        <div class="preview p-gold">
+          <span class="tag en">Current</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Gold Elegance</h2>
+          <p>Dark hero, gold accents, envelope opening animation</p>
+          <span class="badge">الحالي — Current</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-light.html">
+        <div class="preview p-light">
+          <span class="tag en">Minimal</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Light Minimal</h2>
+          <p>Clean white, airy, modern sans-serif feel</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-dark.html">
+        <div class="preview p-dark">
+          <span class="tag en">Luxury</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Dark Luxury</h2>
+          <p>Full black & gold, art deco, dramatic</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-botanical.html">
+        <div class="preview p-botanical">
+          <span class="tag en">Nature</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Botanical</h2>
+          <p>Soft sage green, natural, romantic garden</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-islamic.html">
+        <div class="preview p-islamic">
+          <span class="tag en">Traditional</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Islamic Classic</h2>
+          <p>Cream & gold arches, geometric patterns</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-rosegold.html">
+        <div class="preview p-rosegold">
+          <span class="tag en">Romantic</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Rose Gold</h2>
+          <p>Blush pink & rose, soft and romantic</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-midnight.html">
+        <div class="preview p-midnight">
+          <span class="tag en">Elegant</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Midnight Blue</h2>
+          <p>Navy & silver, sophisticated evening</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-royal.html">
+        <div class="preview p-royal">
+          <span class="tag en">Royal</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Royal Purple</h2>
+          <p>Plum & lavender, regal luxury</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-desert.html">
+        <div class="preview p-desert">
+          <span class="tag en">Warm</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Desert Sand</h2>
+          <p>Terracotta & sand, warm Arabic feel</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-artdeco.html">
+        <div class="preview p-artdeco">
+          <span class="tag en">Bold</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Art Deco</h2>
+          <p>Black & gold geometric, 1920s glamour</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-ocean.html">
+        <div class="preview p-ocean">
+          <span class="tag en">Fresh</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Ocean Breeze</h2>
+          <p>Teal & aqua, fresh and modern</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-pastel.html">
+        <div class="preview p-pastel">
+          <span class="tag en">Soft</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Pastel Dream</h2>
+          <p>Soft blush, lavender, mint & sky — gentle and dreamy</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-champagne.html">
+        <div class="preview p-champagne">
+          <span class="tag en">Warm</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Champagne</h2>
+          <p>Ivory & golden bubbly, classic celebration</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-emerald.html">
+        <div class="preview p-emerald">
+          <span class="tag en">Luxury</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Emerald</h2>
+          <p>Rich green & gold, regal garden party</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-sunset.html">
+        <div class="preview p-sunset">
+          <span class="tag en">Warm</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Sunset</h2>
+          <p>Coral & peach golden hour glow</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-vintage.html">
+        <div class="preview p-vintage">
+          <span class="tag en">Classic</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Vintage</h2>
+          <p>Aged paper & sepia, timeless romance</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-marble.html">
+        <div class="preview p-marble">
+          <span class="tag en">Luxury</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Marble</h2>
+          <p>White & gray stone, ultra elegant</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-nordic.html">
+        <div class="preview p-nordic">
+          <span class="tag en">Clean</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Nordic</h2>
+          <p>Scandinavian minimal, warm white</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+
+      <a class="card" href="template-cherry.html">
+        <div class="preview p-cherry">
+          <span class="tag en">Floral</span>
+          <span class="names en">Amr & Amira</span>
+        </div>
+        <div class="info">
+          <h2>Cherry Blossom</h2>
+          <p>Soft pink sakura, delicate & floral</p>
+          <span class="badge">Preview</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

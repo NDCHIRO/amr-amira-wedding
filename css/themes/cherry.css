@@ -1,0 +1,77 @@
+/* Cherry Blossom — soft pink sakura */
+:root {
+  --gold: #d88898;
+  --gold-light: #f0c0c8;
+  --gold-dark: #b86878;
+  --ink: #5a3840;
+  --ink-soft: #704850;
+  --cream: #fff8f9;
+  --cream-dark: #fef0f2;
+  --text: #5a3840;
+  --text-muted: #a88088;
+  --white: #ffffff;
+  --shadow: rgba(216, 136, 152, 0.1);
+  --shadow-lg: rgba(216, 136, 152, 0.16);
+}
+body { background: var(--cream-dark); }
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 200, 210, 0.5) 0%, transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(255, 180, 200, 0.4) 0%, transparent 25%),
+    radial-gradient(circle at 70% 80%, rgba(255, 210, 220, 0.35) 0%, transparent 30%),
+    radial-gradient(circle at 25% 70%, rgba(248, 190, 210, 0.3) 0%, transparent 25%),
+    linear-gradient(165deg, #fff8f9 0%, #fef0f4 50%, #fce8ee 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '🌸';
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.15;
+  top: 15%; left: 10%;
+  animation: petalFloat 6s ease-in-out infinite;
+}
+.hero::after {
+  content: '🌸';
+  position: absolute;
+  font-size: 18px;
+  opacity: 0.12;
+  top: 25%; right: 15%;
+  animation: petalFloat 8s ease-in-out infinite reverse;
+}
+@keyframes petalFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+}
+.hero-glow { background: radial-gradient(circle, rgba(248, 180, 200, 0.2) 0%, transparent 70%); }
+.hero-frame { border-color: rgba(216, 136, 152, 0.25); border-radius: 16px; }
+.bismillah { color: var(--gold-dark); }
+.hero-tag { color: var(--gold-dark); border-color: rgba(216,136,152,0.35); background: rgba(255,255,255,0.6); border-radius: 20px; }
+.hero-names-en {
+  background: linear-gradient(135deg, var(--gold-dark), #e898a8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-names-ar { color: var(--ink); }
+.hero-ornament path, .hero-ornament circle { stroke: var(--gold); fill: var(--gold); }
+.countdown-wrap { background: var(--cream-dark); margin-top: -40px; }
+.countdown-card { background: rgba(255,255,255,0.85); border-color: rgba(216,136,152,0.2); border-radius: 20px; }
+.section-subtitle { color: var(--gold-dark); }
+.details { background: #fff8f9; }
+.detail-card { background: var(--white); border-color: rgba(216,136,152,0.15); border-radius: 16px; }
+.detail-card::before { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark)); }
+.quote-section { background: linear-gradient(135deg, #b86878, #d88898, #e8a0b0); }
+.quote-text { color: #fff8f9; }
+.location { background: var(--white); }
+.location-info { background: #fff8f9; }
+.btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); border-radius: 24px; }
+.rsvp { background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255,180,200,0.2) 0%, transparent 60%), var(--cream-dark); }
+.rsvp-card { border-radius: 20px; border-color: rgba(216,136,152,0.15); }
+footer { background: linear-gradient(135deg, #b86878, #d88898); }
+footer .monogram { color: #fff8f9; }
+.template-switch {
+  position: fixed; bottom: 20px; left: 20px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #fff; padding: 10px 18px; border-radius: 24px;
+  text-decoration: none; font-size: 13px; z-index: 100;
+}

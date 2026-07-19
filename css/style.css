@@ -75,6 +75,13 @@ body.intro-done .site-content {
 }
 
 /* Sparkles */
+.intro-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .intro-sparkles span {
   position: absolute;
   width: 3px;
@@ -540,26 +547,27 @@ body.intro-done .site-content {
 }
 
 .hero-names-en {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 400;
   font-style: italic;
-  color: var(--white);
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 12px;
-  background: linear-gradient(135deg, var(--white) 30%, var(--gold-light) 100%);
+  background: linear-gradient(135deg, #8a6528 0%, #a07830 45%, #b89240 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: #8a6528;
 }
 
 .hero-amp {
   display: block;
   font-size: 0.45em;
-  font-style: normal;
-  color: var(--gold);
-  -webkit-text-fill-color: var(--gold);
-  margin: 4px 0;
+  font-style: italic;
+  font-weight: 400;
+  color: #8f6830;
+  -webkit-text-fill-color: #8f6830;
+  margin: 6px 0;
 }
 
 .hero-names-ar {

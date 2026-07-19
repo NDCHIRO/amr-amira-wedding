@@ -1,0 +1,112 @@
+/* Art Deco — bold geometric black & gold */
+:root {
+  --gold: #d4af37;
+  --gold-light: #f0dfa0;
+  --gold-dark: #b8941f;
+  --ink: #0c0c0c;
+  --ink-soft: #1a1a1a;
+  --cream: #f5f0e0;
+  --cream-dark: #ebe5d5;
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.12);
+  --shadow-lg: rgba(0, 0, 0, 0.2);
+}
+
+body { background: var(--cream-dark); }
+
+.hero {
+  background:
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212,175,55,0.03) 20px, rgba(212,175,55,0.03) 21px),
+    linear-gradient(180deg, #0c0c0c 0%, #1a1a1a 100%);
+}
+
+.hero-glow { display: none; }
+.hero-frame {
+  inset: 24px;
+  border: 2px solid var(--gold);
+  border-radius: 0;
+}
+.hero-frame::before, .hero-frame::after {
+  width: 32px; height: 32px;
+  border-width: 2px;
+  border-color: var(--gold);
+}
+
+.bismillah { color: var(--gold); letter-spacing: 4px; font-size: 12px; }
+.hero-tag {
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 0;
+  letter-spacing: 6px;
+  background: transparent;
+}
+
+.hero-names-en {
+  background: none;
+  -webkit-text-fill-color: var(--gold);
+  color: var(--gold);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.hero-names-ar { color: var(--gold-light); letter-spacing: 2px; }
+.hero-date { color: rgba(255,255,255,0.55); }
+.hero-ornament { display: none; }
+
+.hero-divider span { background: var(--gold); width: 40px; height: 2px; }
+.hero-divider svg { fill: var(--gold); }
+
+.countdown-wrap {
+  background: var(--cream-dark);
+  margin-top: 0;
+  padding: 60px 0 20px;
+}
+.countdown-card {
+  border-radius: 0;
+  border: 2px solid var(--gold);
+  background: var(--cream);
+}
+.countdown-number { color: var(--ink); font-weight: 700; }
+
+.details { background: var(--cream); }
+.detail-card {
+  border-radius: 0;
+  border: 1px solid var(--gold);
+  background: var(--white);
+}
+.detail-card::before { height: 4px; background: var(--gold); }
+
+.quote-section {
+  background: var(--ink);
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+}
+.quote-text { color: var(--gold); letter-spacing: 1px; }
+
+.location { background: var(--cream-dark); }
+.location-card { border-radius: 0; border: 2px solid var(--gold); }
+.location-info { background: var(--cream); }
+
+.btn { border-radius: 0; background: var(--ink); color: var(--gold); border: 2px solid var(--gold); }
+.btn-gold { background: var(--gold); color: var(--ink); border: none; }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { border-radius: 0; border: 2px solid var(--gold); color: var(--ink); }
+
+.rsvp { background: var(--cream); }
+.rsvp-card { border-radius: 0; border: 2px solid var(--gold); }
+
+footer {
+  background: var(--ink);
+  border-top: 4px solid var(--gold);
+}
+footer .monogram { color: var(--gold); letter-spacing: 4px; }
+
+.template-switch {
+  position: fixed; bottom: 20px; left: 20px;
+  background: var(--gold); color: var(--ink);
+  padding: 10px 18px; border-radius: 0;
+  text-decoration: none; font-size: 13px; font-weight: 700; z-index: 100;
+}

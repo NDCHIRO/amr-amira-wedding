@@ -1,0 +1,69 @@
+/* Rose Gold — romantic blush & rose */
+:root {
+  --gold: #b76e79;
+  --gold-light: #e8b4b8;
+  --gold-dark: #9e5560;
+  --ink: #5c3a42;
+  --ink-soft: #7a4f58;
+  --cream: #fff9f9;
+  --cream-dark: #fdf0f2;
+  --text: #5c3a42;
+  --text-muted: #a07078;
+  --white: #ffffff;
+  --shadow: rgba(183, 110, 121, 0.1);
+  --shadow-lg: rgba(183, 110, 121, 0.16);
+}
+
+body { background: var(--cream-dark); }
+
+.hero {
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 20%, rgba(232, 180, 184, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(255, 200, 210, 0.3) 0%, transparent 50%),
+    linear-gradient(165deg, #fff5f6 0%, #fdeef1 50%, #fae0e6 100%);
+}
+
+.hero-glow { background: radial-gradient(circle, rgba(183, 110, 121, 0.12) 0%, transparent 70%); }
+.hero-frame { border-color: rgba(183, 110, 121, 0.25); }
+.hero-frame::before, .hero-frame::after { border-color: rgba(183, 110, 121, 0.35); }
+.hero-tag { color: var(--gold-dark); border-color: rgba(183,110,121,0.3); }
+.bismillah { color: var(--gold-dark); }
+
+.hero-names-en {
+  background: linear-gradient(135deg, var(--gold-dark), #c98894);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-names-ar { color: var(--ink); }
+.hero-amp { -webkit-text-fill-color: var(--gold) !important; color: var(--gold) !important; }
+.hero-ornament path, .hero-ornament circle { stroke: var(--gold); fill: var(--gold); }
+.hero-divider svg { fill: var(--gold); }
+.scroll-hint svg { stroke: var(--gold-dark); }
+
+.countdown-wrap { background: var(--cream-dark); margin-top: -40px; }
+.countdown-card { border-color: rgba(183,110,121,0.2); background: var(--white); }
+.section-subtitle { color: var(--gold-dark); }
+
+.details { background: var(--cream); }
+.detail-card::before { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark)); }
+
+.quote-section { background: linear-gradient(135deg, #9e5560, #b76e79); }
+.quote-text { color: #fff5f6; }
+
+.location { background: var(--white); }
+.location-info { background: var(--cream); }
+
+.btn { background: var(--gold-dark); }
+.btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+.btn-gold:hover { background: var(--gold); color: var(--white); }
+
+.rsvp { background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(232,180,184,0.3) 0%, transparent 60%), var(--cream-dark); }
+footer { background: var(--ink); }
+footer .monogram { color: var(--gold-light); }
+
+.template-switch {
+  position: fixed; bottom: 20px; left: 20px;
+  background: var(--gold-dark); color: #fff;
+  padding: 10px 18px; border-radius: 30px;
+  text-decoration: none; font-size: 13px; z-index: 100;
+}

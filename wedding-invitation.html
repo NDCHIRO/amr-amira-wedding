@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دعوة زفاف - عمرو و أميرة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f0e8 0%, #e8dcc8 100%);
+      padding: 20px;
+      font-family: 'Amiri', serif;
+    }
+
+    .invitation {
+      max-width: 420px;
+      width: 100%;
+      background: linear-gradient(180deg, #fffdf8 0%, #faf6ee 100%);
+      border: 2px solid #c9a84c;
+      border-radius: 4px;
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(139, 109, 42, 0.15);
+    }
+
+    .invitation::before,
+    .invitation::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 2px solid #c9a84c;
+    }
+
+    .invitation::before {
+      top: 12px;
+      right: 12px;
+      border-left: none;
+      border-bottom: none;
+    }
+
+    .invitation::after {
+      bottom: 12px;
+      left: 12px;
+      border-right: none;
+      border-top: none;
+    }
+
+    .arch {
+      width: 120px;
+      height: 40px;
+      margin: 0 auto 20px;
+      border: 2px solid #c9a84c;
+      border-bottom: none;
+      border-radius: 60px 60px 0 0;
+      position: relative;
+    }
+
+    .arch::after {
+      content: '☪';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: #8b6914;
+      background: #fffdf8;
+      padding: 0 8px;
+    }
+
+    .bismillah {
+      font-size: 14px;
+      color: #8b6914;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    .title {
+      font-size: 22px;
+      color: #6b4f0a;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+      margin: 16px auto;
+    }
+
+    .names-ar {
+      font-size: 36px;
+      color: #5c3d0e;
+      margin: 20px 0;
+      line-height: 1.4;
+    }
+
+    .names-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #8b6914;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-size: 18px;
+      color: #4a3728;
+      margin: 20px 0 8px;
+    }
+
+    .date-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: #7a6548;
+      margin-bottom: 24px;
+    }
+
+    .venue {
+      font-size: 22px;
+      color: #5c3d0e;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .venue-sub {
+      font-size: 16px;
+      color: #7a6548;
+      margin-bottom: 28px;
+    }
+
+    .location-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #8b6914, #c9a84c);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(139, 105, 20, 0.3);
+    }
+
+    .location-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(139, 105, 20, 0.4);
+    }
+
+    .location-btn:active {
+      transform: translateY(0);
+    }
+
+    .pin {
+      font-size: 18px;
+    }
+
+    .footer-text {
+      margin-top: 24px;
+      font-size: 14px;
+      color: #9a8568;
+      line-height: 1.6;
+    }
+
+    .pattern {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.15;
+      background: repeating-linear-gradient(
+        45deg,
+        #c9a84c,
+        #c9a84c 2px,
+        transparent 2px,
+        transparent 8px
+      );
+    }
+
+    .pattern-tl { top: 20px; left: 20px; }
+    .pattern-tr { top: 20px; right: 20px; }
+    .pattern-bl { bottom: 20px; left: 20px; }
+    .pattern-br { bottom: 20px; right: 20px; }
+  </style>
+</head>
+<body>
+  <div class="invitation">
+    <div class="pattern pattern-tl"></div>
+    <div class="pattern pattern-tr"></div>
+    <div class="pattern pattern-bl"></div>
+    <div class="pattern pattern-br"></div>
+
+    <div class="arch"></div>
+
+    <p class="bismillah">بسم الله الرحمن الرحيم</p>
+    <h1 class="title">دعوة زفاف</h1>
+    <div class="divider"></div>
+
+    <p class="names-en">Amr & Amera</p>
+    <h2 class="names-ar">عمرو و أميرة</h2>
+
+    <div class="divider"></div>
+
+    <p class="date">الجمعة ٣١ يوليو ٢٠٢٦</p>
+    <p class="date-en">Friday, 31 July 2026</p>
+
+    <div class="divider"></div>
+
+    <p class="venue">قاعة القصر</p>
+    <p class="venue-sub">دار ضباط المدفعية — مدينة نصر، القاهرة</p>
+
+    <a class="location-btn" href="https://maps.google.com/?q=30.079136,31.353842" target="_blank" rel="noopener">
+      <span class="pin">📍</span>
+      <span>اضغط لعرض الموقع على الخريطة</span>
+    </a>
+
+    <p class="footer-text">
+      يشرفنا حضوركم لمشاركتنا فرحتنا
+    </p>
+  </div>
+</body>
+</html>

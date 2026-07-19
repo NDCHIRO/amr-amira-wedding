@@ -7,14 +7,30 @@
   <title>Amr & Amira — Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/queen-theme.css">
 </head>
 <body class="intro-active">
 
   <!-- Envelope Intro -->
   <div class="envelope-intro" id="envelopeIntro" role="button" tabindex="0" aria-label="Open invitation">
+
+    <!-- Animated intro background -->
+    <div class="intro-bg" aria-hidden="true">
+      <div class="intro-bg-gradient"></div>
+      <div class="intro-bg-pattern"></div>
+      <div class="intro-bg-shimmer"></div>
+      <div class="intro-bg-petals" id="introPetals"></div>
+      <div class="intro-bg-confetti" id="introConfetti"></div>
+    </div>
+
+    <div class="intro-frame" aria-hidden="true"></div>
+    <p class="intro-crown" aria-hidden="true">♕</p>
+    <p class="intro-names en" aria-hidden="true">Amr & Amira</p>
+
     <div class="intro-sparkles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
 
@@ -57,37 +73,76 @@
   </div>
 
   <main class="site-content" id="siteContent">
+
+  <!-- Royal background animation -->
+  <div class="bg-animation" aria-hidden="true">
+    <div class="bg-shimmer"></div>
+    <div class="bg-particles" id="bgParticles"></div>
+    <div class="bg-particles" id="bgSparkles"></div>
+  </div>
+
   <header class="hero" id="home">
-    <div class="hero-glow"></div>
+    <!-- Hero background animation -->
+    <div class="hero-bg-animation" aria-hidden="true">
+      <div class="hero-bg-shimmer"></div>
+      <div class="hero-bg-orb hero-bg-orb-1"></div>
+      <div class="hero-bg-orb hero-bg-orb-2"></div>
+      <div class="hero-bg-orb hero-bg-orb-3"></div>
+      <div class="hero-bg-sparkles" id="heroSparkles"></div>
+      <div class="hero-bg-confetti" id="heroConfetti"></div>
+    </div>
+
+    <!-- Hero decorations -->
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="hero-corner hero-corner-tl" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none"><path d="M10 10 Q60 10 60 60 Q60 110 110 110" stroke="#c9a050" stroke-width="1.2"/><path d="M20 20 Q50 20 50 50 Q50 80 80 80" stroke="#c9a050" stroke-width="0.8" opacity="0.6"/><circle cx="10" cy="10" r="3" fill="#c9a050"/></svg>
+    </div>
+    <div class="hero-corner hero-corner-tr" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none"><path d="M10 10 Q60 10 60 60 Q60 110 110 110" stroke="#c9a050" stroke-width="1.2"/><path d="M20 20 Q50 20 50 50 Q50 80 80 80" stroke="#c9a050" stroke-width="0.8" opacity="0.6"/><circle cx="10" cy="10" r="3" fill="#c9a050"/></svg>
+    </div>
+    <div class="hero-corner hero-corner-bl" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none"><path d="M10 10 Q60 10 60 60 Q60 110 110 110" stroke="#c9a050" stroke-width="1.2"/><path d="M20 20 Q50 20 50 50 Q50 80 80 80" stroke="#c9a050" stroke-width="0.8" opacity="0.6"/><circle cx="10" cy="10" r="3" fill="#c9a050"/></svg>
+    </div>
+    <div class="hero-corner hero-corner-br" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none"><path d="M10 10 Q60 10 60 60 Q60 110 110 110" stroke="#c9a050" stroke-width="1.2"/><path d="M20 20 Q50 20 50 50 Q50 80 80 80" stroke="#c9a050" stroke-width="0.8" opacity="0.6"/><circle cx="10" cy="10" r="3" fill="#c9a050"/></svg>
+    </div>
+
+    <div class="hero-petals" id="heroPetals" aria-hidden="true"></div>
+
     <div class="hero-frame"></div>
 
     <div class="hero-content">
-      <svg class="hero-ornament" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 20 Q30 0 60 20 Q90 40 110 20" stroke="#d4af37" stroke-width="0.8" fill="none"/>
-        <circle cx="60" cy="20" r="3" fill="#d4af37"/>
-        <path d="M45 20 L55 20 M65 20 L75 20" stroke="#d4af37" stroke-width="0.6"/>
-      </svg>
-
       <p class="bismillah">بسم الله الرحمن الرحيم</p>
-      <p class="hero-tag en">Wedding Invitation</p>
+      <p class="hero-tag en">Royal Wedding Invitation</p>
 
-      <h1 class="hero-names-en en">
-        Amr
-        <span class="hero-amp">&</span>
-        Amira
-      </h1>
-      <h2 class="hero-names-ar">عمرو و أميرة</h2>
-
-      <div class="hero-divider">
-        <span></span>
-        <svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z"/></svg>
-        <span></span>
+      <div class="hero-under-arch">
+        <p class="hero-arch-crown en" aria-hidden="true">♕</p>
+        <div class="hero-arch-bg" aria-hidden="true"></div>
+        <div class="hero-names-stack">
+          <h1 class="hero-names-en en">
+            <span class="hero-name">Amr</span>
+            <span class="hero-amp">&</span>
+            <span class="hero-name">Amira</span>
+          </h1>
+          <!-- <h2 class="hero-names-ar">عمرو و أميرة</h2> -->
+        </div>
       </div>
 
+      <div class="hero-divider"><span></span></div>
+
       <p class="hero-date">
-        الجمعة ٣١ يوليو ٢٠٢٦<br>
-        <span class="en">Friday, 31 July 2026</span>
+        الجمعة ٣١ يوليو ٢٠٢٦ — الساعة ٨:٠٠ مساءً<br>
+        <span class="en">Friday, 31 July 2026 · 8:00 PM</span>
       </p>
+
+      <div class="hero-venue">
+        <p class="hero-venue-hall">قاعة القصر</p>
+        <p class="hero-venue-place">دار ضباط المدفعية — مدينة نصر، القاهرة</p>
+        <p class="hero-venue-en en">Qasr Hall · Dar El Madfaaia, Nasr City</p>
+        <a class="hero-venue-link" href="https://maps.google.com/?q=30.079136,31.353842" target="_blank" rel="noopener">
+          📍 عرض الموقع على الخريطة
+        </a>
+      </div>
     </div>
 
     <a href="#countdown" class="scroll-hint en">
@@ -227,36 +282,18 @@
     </div>
   </section>
 
-  <!-- Share -->
-  <section class="rsvp" id="share">
-    <div class="container">
-      <div class="rsvp-card reveal">
-        <div class="section-header" style="margin-bottom: 32px;">
-          <h2 class="section-title">شاركونا الفرحة</h2>
-          <p class="section-subtitle en">Share Our Joy</p>
-        </div>
-        <p class="rsvp-text">
-          يسعدنا أن تشاركونا هذا اليوم المميز في حياتنا
-          <span class="en">Your presence would mean the world to us</span>
-        </p>
-        <div class="btn-group">
-          <a class="btn btn-gold" href="https://wa.me/?text=%D8%AF%D8%B9%D9%88%D8%A9%20%D8%B2%D9%81%D8%A7%D9%81%20%D8%B9%D9%85%D8%B1%D9%88%20%D9%88%20%D8%A3%D9%85%D9%8A%D8%B1%D8%A9%20-%2031%20%D9%8A%D9%88%D9%84%D9%8A%D9%88%202026" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-            مشاركة الدعوة
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
-    <p class="monogram en">A & A</p>
-    <p>عمرو و أميرة — ٣١ يوليو ٢٠٢٦</p>
+    <div class="footer-inner">
+      <div class="footer-divider" aria-hidden="true"><span></span></div>
+      <p class="monogram en">A & A</p>
+      <p class="footer-names">عمرو و أميرة — ٣١ يوليو ٢٠٢٦</p>
+    </div>
   </footer>
 
   </main>
 
+  <script src="js/queen-animations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

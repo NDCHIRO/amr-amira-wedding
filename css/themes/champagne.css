@@ -1,0 +1,48 @@
+/* Champagne — warm ivory & bubbly gold */
+:root {
+  --gold: #c8a860;
+  --gold-light: #e8d8a8;
+  --gold-dark: #a88840;
+  --ink: #4a4030;
+  --ink-soft: #5c5040;
+  --cream: #fffbf5;
+  --cream-dark: #f8f2e8;
+  --text: #4a4030;
+  --text-muted: #8a8070;
+  --white: #ffffff;
+  --shadow: rgba(74, 64, 48, 0.08);
+  --shadow-lg: rgba(74, 64, 48, 0.14);
+}
+body { background: var(--cream-dark); }
+.hero {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 20%, rgba(232, 216, 168, 0.45) 0%, transparent 55%),
+    linear-gradient(165deg, #fffbf5 0%, #f8f0e0 50%, #f0e8d0 100%);
+}
+.hero-glow { background: radial-gradient(circle, rgba(200, 168, 96, 0.15) 0%, transparent 70%); }
+.hero-frame { border-color: rgba(200, 168, 96, 0.35); }
+.bismillah, .hero-tag { color: var(--gold-dark); }
+.hero-tag { border-color: rgba(200,168,96,0.35); background: rgba(255,255,255,0.5); }
+.hero-names-en {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-names-ar { color: var(--ink); }
+.countdown-wrap { background: var(--cream-dark); margin-top: -40px; }
+.countdown-card { background: var(--white); border-color: rgba(200,168,96,0.25); }
+.details { background: var(--cream); }
+.detail-card::before { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark)); }
+.quote-section { background: linear-gradient(135deg, #a88840, #c8a860); }
+.quote-text { color: #fffbf5; }
+.location { background: var(--white); }
+.location-info { background: var(--cream); }
+.btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+.rsvp { background: var(--cream-dark); }
+footer { background: var(--ink); }
+footer .monogram { color: var(--gold-light); }
+.template-switch {
+  position: fixed; bottom: 20px; left: 20px;
+  background: var(--gold-dark); color: #fff;
+  padding: 10px 18px; border-radius: 30px;
+  text-decoration: none; font-size: 13px; z-index: 100;
+}

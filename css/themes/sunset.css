@@ -1,0 +1,49 @@
+/* Sunset — coral, peach & golden hour */
+:root {
+  --gold: #e88860;
+  --gold-light: #f8c8a8;
+  --gold-dark: #c86840;
+  --ink: #4a2818;
+  --ink-soft: #683820;
+  --cream: #fff8f4;
+  --cream-dark: #fef0e8;
+  --text: #4a2818;
+  --text-muted: #a07058;
+  --white: #ffffff;
+  --shadow: rgba(200, 104, 64, 0.1);
+  --shadow-lg: rgba(200, 104, 64, 0.16);
+}
+body { background: var(--cream-dark); }
+.hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 80%, rgba(248, 160, 100, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(255, 200, 140, 0.35) 0%, transparent 50%),
+    linear-gradient(165deg, #fef0e8 0%, #f8d8c0 40%, #f0c0a0 100%);
+}
+.hero-glow { background: radial-gradient(circle, rgba(232, 136, 96, 0.2) 0%, transparent 70%); }
+.hero-frame { border-color: rgba(232, 136, 96, 0.3); }
+.bismillah, .hero-tag { color: var(--gold-dark); }
+.hero-tag { border-color: rgba(232,136,96,0.35); background: rgba(255,255,255,0.4); }
+.hero-names-en {
+  background: linear-gradient(135deg, var(--gold-dark), #f0a070);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-names-ar { color: var(--ink); }
+.hero-ornament path, .hero-ornament circle { stroke: var(--gold); fill: var(--gold); }
+.countdown-wrap { background: var(--cream-dark); margin-top: -40px; }
+.countdown-card { border-color: rgba(232,136,96,0.25); }
+.details { background: var(--cream); }
+.detail-card::before { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark)); }
+.quote-section { background: linear-gradient(135deg, #c86840, #e88860, #f0a070); }
+.quote-text { color: #fff8f4; }
+.location { background: var(--white); }
+.rsvp { background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(248,160,100,0.25) 0%, transparent 60%), var(--cream-dark); }
+.btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+footer { background: var(--ink); }
+footer .monogram { color: var(--gold-light); }
+.template-switch {
+  position: fixed; bottom: 20px; left: 20px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #fff; padding: 10px 18px; border-radius: 30px;
+  text-decoration: none; font-size: 13px; z-index: 100;
+}

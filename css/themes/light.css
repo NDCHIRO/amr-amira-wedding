@@ -1,0 +1,91 @@
+/* Light Minimal Theme */
+:root {
+  --gold: #b8973a;
+  --gold-light: #d4c4a0;
+  --gold-dark: #8a7340;
+  --ink: #111111;
+  --ink-soft: #333333;
+  --cream: #ffffff;
+  --cream-dark: #f7f7f7;
+  --text: #222222;
+  --text-muted: #666666;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-lg: rgba(0, 0, 0, 0.1);
+}
+
+body { background: #ffffff; }
+
+.hero {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0, 0, 0, 0.03) 0%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+.hero-glow, .hero-frame { display: none; }
+
+.hero-tag {
+  color: var(--text-muted);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.hero-names-en {
+  background: none;
+  -webkit-text-fill-color: var(--ink);
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero-names-ar { color: var(--text-muted); }
+.hero-date { color: var(--text-muted); }
+.hero-date .en { color: var(--text-muted); }
+.bismillah { color: var(--text-muted); }
+.hero-ornament path, .hero-ornament circle { stroke: #ccc; fill: #ccc; }
+.hero-divider span { background: linear-gradient(90deg, transparent, #ccc, transparent); }
+.hero-divider svg { fill: #ccc; }
+.scroll-hint { color: var(--text-muted); }
+.scroll-hint svg { stroke: var(--text-muted); }
+
+.countdown-wrap { background: #f9f9f9; margin-top: 0; padding: 60px 0 20px; }
+.countdown-card { border: 1px solid #eee; box-shadow: 0 4px 24px var(--shadow); }
+
+.details { background: #ffffff; }
+.detail-card { border: 1px solid #eee; }
+.detail-card::before { background: var(--ink); }
+
+.quote-section {
+  background: #f5f5f5;
+}
+.quote-section::before { color: rgba(0,0,0,0.04); }
+.quote-text { color: var(--ink); }
+.quote-text .en { color: var(--text-muted); }
+
+.location { background: #fafafa; }
+.location-card { border: 1px solid #eee; }
+.location-info { background: #fff; }
+
+.btn { background: var(--ink); color: #fff; }
+.btn-gold { background: var(--ink); }
+.btn-gold:hover { background: #333; color: #fff; }
+.btn-outline { color: var(--ink); border-color: rgba(0,0,0,0.15); }
+
+.rsvp { background: #f9f9f9; }
+.rsvp-card { border: 1px solid #eee; }
+
+footer { background: var(--ink); }
+footer .monogram { color: #fff; }
+
+.template-switch {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 13px;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
